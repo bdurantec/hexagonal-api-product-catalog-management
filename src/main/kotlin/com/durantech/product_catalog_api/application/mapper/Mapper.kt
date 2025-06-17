@@ -5,6 +5,8 @@ import com.durantech.product_catalog_api.domain.model.Product
 
 fun ProductCreationRequest.toDomain(): Product {
     return Product(
-        name = this.name
+        name = this.name,
+        description = this.description,
+        value = this.value
     )
 }

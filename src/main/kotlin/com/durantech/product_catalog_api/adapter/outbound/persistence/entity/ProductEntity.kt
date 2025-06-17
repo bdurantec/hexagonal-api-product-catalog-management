@@ -1,14 +1,19 @@
 package com.durantech.product_catalog_api.adapter.outbound.persistence.entity
 
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.Table
-import java.util.UUID
+import jakarta.persistence.*
+import java.math.BigDecimal
+import java.util.*
 
 @Entity
-@Table
+@Table(name = "product_entity")
 data class ProductEntity(
     @Id
+    @GeneratedValue
     var id: UUID? = null,
-    val name: String
+    @Column(name = "product_name")
+    val name: String = "",
+    @Column(name = "product_description")
+    val description: String = "",
+    @Column(name = "product_value")
+    val productValue: BigDecimal = BigDecimal.ZERO
 )
