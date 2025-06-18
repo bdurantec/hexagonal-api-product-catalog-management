@@ -1,6 +1,0 @@
-2025-06-17 12:49:15.827746-03:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists product_entity add column [*]value numeric(38,2)"; expected "identifier"; SQL statement:
-alter table if exists product_entity add column value numeric(38,2) [42001-232]
-2025-06-17 12:49:36.128205-03:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into product_entity (description,name,[*]value,id) values (?,?,?,?)"; expected "identifier"; SQL statement:
-insert into product_entity (description,name,value,id) values (?,?,?,?) [42001-232]
