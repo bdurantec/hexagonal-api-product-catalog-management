@@ -11,12 +11,11 @@ import java.util.*
 @Component
 class ProductRepositoryImpl(
     private val productJpaRepository: ProductJpaRepository
-
 ) : ProductRepositoryPort {
-    override fun findById(id: UUID): Product? {
+
+    override fun findById(id: UUID): Optional<Product> {
         return productJpaRepository.findById(id)
             .map { entity -> entity.toDomain() }
-            .orElse(null)
     }
 
     override fun create(product: Product): Product {

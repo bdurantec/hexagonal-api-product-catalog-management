@@ -5,5 +5,5 @@ import java.util.*
 
 interface ProductManagementUseCase {
     fun createProduct(product: Product): Product
-    fun findProductById(id: UUID): Product
+    fun findProductById(productId: UUID): Product
 }
